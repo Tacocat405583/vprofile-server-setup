@@ -24,7 +24,7 @@ v
 v
 [MySQL Database]
 
---- ## Jenkins Automation
+### Jenkins Automation
 
 This project includes a Jenkins pipeline to automate building, testing, and deploying the application.
 Special thanks to the original repository from hkhcoder. Huge thanks for their contributions for their part in helpign me find what I love doing as a developer.
@@ -51,9 +51,6 @@ The `Jenkinsfile` defines a multistage pipeline with the following stages:
 2. Point the job to this repository and the `Jenkinsfile`.  
 3. Customize environment variables or paths as needed within Jenkins.  
 4. Trigger the pipeline manually or hook it to webhooks for automation.
-
----
-
 
 
 
