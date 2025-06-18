@@ -12,40 +12,36 @@ VProfile is a Java-based web application demonstrating a backend stack integrati
 - **RabbitMQ** message broker for asynchronous communication  
 - **Memcached** caching to speed up data retrieval  
 
----
-## Ansible Automation
+---## Jenkins Automation
 
-This project uses Ansible to automate the provisioning and configuration of application components.
+This project includes a Jenkins pipeline to automate building, testing, and deploying the application.
+Special thanks to the original repository from hkhcoder. Huge thanks for their contributions for their part in helpign me find what I love doing as a developer.
 
-### Directory Structure
+### Jenkinsfile Overview
 
-ansible/
-├── ansible.cfg # Ansible configuration file
-├── hosts # Inventory of target servers
-├── playbook.yml # Main playbook
-└── roles/
-├── app/ # Application-related tasks
-├── db/ # Database-related tasks
-└── web/ # Web server-related tasks
+The `Jenkinsfile` defines a multistage pipeline with the following stages:
+
+- **Checkout** – Pulls the latest code from the repository  
+- **Build** – Uses Maven to compile and package the application  
+- **Unit Test** – Runs unit tests to ensure application correctness  
+- **Code Analysis** – (Optional) Integrates tools like SonarQube for static analysis  
+- **Deploy** – Deploys the WAR file to a Tomcat server or target environment  
+
+### Prerequisites
+
+- A Jenkins server with Maven and JDK installed  
+- Jenkins configured with appropriate credentials and agent nodes (if needed)  
+- Optional: SonarQube or Artifactory integration depending on CI/CD goals  
 
 ### How to Use
 
-1. **Update Inventory**
+1. Create a new **Pipeline Job** in Jenkins.  
+2. Point the job to this repository and the `Jenkinsfile`.  
+3. Customize environment variables or paths as needed within Jenkins.  
+4. Trigger the pipeline manually or hook it to webhooks for automation.
 
-   Edit the `ansible/hosts` file to include the IP addresses or hostnames of your target servers.
+---
 
-2. **Run the Playbook**
-
-   ```bash
-   cd ansible
-   ansible-playbook -i hosts playbook.yml
-Ensure Requirements
-
-Ansible is installed (ansible --version)
-
-SSH access is set up between the control node and the target servers
-
-Optional: Define any required variables under group_vars/ or host_vars/ if applicable
 
 ## Architecture Overview
 
