@@ -12,7 +12,19 @@ VProfile is a Java-based web application demonstrating a backend stack integrati
 - **RabbitMQ** message broker for asynchronous communication  
 - **Memcached** caching to speed up data retrieval  
 
----## Jenkins Automation
+
+
+## Architecture Overview
+
+[Client] <---> [Nginx] <---> [Tomcat (Java WebApp)]
+|
+v
+[RabbitMQ] [Memcached]
+|
+v
+[MySQL Database]
+
+--- ## Jenkins Automation
 
 This project includes a Jenkins pipeline to automate building, testing, and deploying the application.
 Special thanks to the original repository from hkhcoder. Huge thanks for their contributions for their part in helpign me find what I love doing as a developer.
@@ -42,16 +54,6 @@ The `Jenkinsfile` defines a multistage pipeline with the following stages:
 
 ---
 
-
-## Architecture Overview
-
-[Client] <---> [Nginx] <---> [Tomcat (Java WebApp)]
-|
-v
-[RabbitMQ] [Memcached]
-|
-v
-[MySQL Database]
 
 
 
