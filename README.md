@@ -13,6 +13,39 @@ VProfile is a Java-based web application demonstrating a backend stack integrati
 - **Memcached** caching to speed up data retrieval  
 
 ---
+## Ansible Automation
+
+This project uses Ansible to automate the provisioning and configuration of application components.
+
+### Directory Structure
+
+ansible/
+├── ansible.cfg # Ansible configuration file
+├── hosts # Inventory of target servers
+├── playbook.yml # Main playbook
+└── roles/
+├── app/ # Application-related tasks
+├── db/ # Database-related tasks
+└── web/ # Web server-related tasks
+
+### How to Use
+
+1. **Update Inventory**
+
+   Edit the `ansible/hosts` file to include the IP addresses or hostnames of your target servers.
+
+2. **Run the Playbook**
+
+   ```bash
+   cd ansible
+   ansible-playbook -i hosts playbook.yml
+Ensure Requirements
+
+Ansible is installed (ansible --version)
+
+SSH access is set up between the control node and the target servers
+
+Optional: Define any required variables under group_vars/ or host_vars/ if applicable
 
 ## Architecture Overview
 
