@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash this it to open bash interpreter
 DATABASE_PASS='admin123'
 sudo yum update -y
 sudo yum install epel-release -y

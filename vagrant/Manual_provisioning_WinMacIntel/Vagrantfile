@@ -1,4 +1,6 @@
 Vagrant.configure("2") do |config|
+
+  #if we do say cat /etc/hosts on the VM, we should see the hostnames
   config.hostmanager.enabled = true 
   config.hostmanager.manage_host = true
   
