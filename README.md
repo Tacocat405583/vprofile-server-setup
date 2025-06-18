@@ -27,7 +27,7 @@ v
 ### Jenkins Automation
 
 This project includes a Jenkins pipeline to automate building, testing, and deploying the application.
-Special thanks to the original repository from hkhcoder. Huge thanks for their contributions for their part in helpign me find what I love doing as a developer.
+Special thanks to the original repository from hkhcoder. Huge thanks for their contributions for their part in helping me find what I love doing as a developer.
 
 ### Jenkinsfile Overview
 
